@@ -6,7 +6,7 @@ group: 2D
 label: Graphics/2D
 ---
 
-[SpriteAtlas](/en/apis/core/#SpriteAtlas) is a collection of sprite resources that combines multiple sprite textures into a single sprite atlas to merge draw calls during rendering. It has the following advantages:
+[SpriteAtlas](/apis/core/#SpriteAtlas) is a collection of sprite resources that combines multiple sprite textures into a single sprite atlas to merge draw calls during rendering. It has the following advantages:
 
 - Better performance (merged draw calls);
 - Less video memory (packing algorithm reduces texture size);
@@ -88,11 +88,11 @@ If you encounter the following warning during packaging, it means that the size 
 
 | Property | Value |
 | --- | --- |
-| Wrap Mode U ([wrapModeU](/en/apis/core/#Texture-wrapModeU)) | Clamp ([Clamp](/en/apis/core/#TextureWrapMode-Clamp)), Repeat ([Repeat](/en/apis/core/#TextureWrapMode-Repeat)), Mirror ([Mirror](/en/apis/core/#TextureWrapMode-Mirror)) |
-| Wrap Mode V ([wrapModeV](/en/apis/core/#Texture-wrapModeV)) | Clamp ([Clamp](/en/apis/core/#TextureWrapMode-Clamp)), Repeat ([Repeat](/en/apis/core/#TextureWrapMode-Repeat)), Mirror ([Mirror](/en/apis/core/#TextureWrapMode-Mirror)) |
-| Filter Mode ([filterMode](/en/apis/core/#Texture-filterMode)) | Point ([Point](/en/apis/core/#TextureFilterMode-Point)), Bilinear ([Bilinear](/en/apis/core/#TextureFilterMode-Bilinear)), Trilinear ([Trilinear](/en/apis/core/#TextureFilterMode-Trilinear)) |
-| Anisotropic Filtering Level ([anisoLevel](/en/apis/core/#Texture-anisoLevel)) | Anisotropic level, 1 ~ 16 |
-| Mipmap ([Mipmap](/en/apis/core/#Texture-generateMipmaps)) | true, false |
+| Wrap Mode U ([wrapModeU](/apis/core/#Texture-wrapModeU)) | Clamp ([Clamp](/apis/core/#TextureWrapMode-Clamp)), Repeat ([Repeat](/apis/core/#TextureWrapMode-Repeat)), Mirror ([Mirror](/apis/core/#TextureWrapMode-Mirror)) |
+| Wrap Mode V ([wrapModeV](/apis/core/#Texture-wrapModeV)) | Clamp ([Clamp](/apis/core/#TextureWrapMode-Clamp)), Repeat ([Repeat](/apis/core/#TextureWrapMode-Repeat)), Mirror ([Mirror](/apis/core/#TextureWrapMode-Mirror)) |
+| Filter Mode ([filterMode](/apis/core/#Texture-filterMode)) | Point ([Point](/apis/core/#TextureFilterMode-Point)), Bilinear ([Bilinear](/apis/core/#TextureFilterMode-Bilinear)), Trilinear ([Trilinear](/apis/core/#TextureFilterMode-Trilinear)) |
+| Anisotropic Filtering Level ([anisoLevel](/apis/core/#Texture-anisoLevel)) | Anisotropic level, 1 ~ 16 |
+| Mipmap ([Mipmap](/apis/core/#Texture-generateMipmaps)) | true, false |
 
 ### Best Practices
 
@@ -102,9 +102,9 @@ Click on the `Sprite Atlas` asset, adjust the `Max Texture Width` and `Max Textu
 
 The left side of the preview image shows the size information of the exported image, and the right side shows the atlas utilization information (representing the percentage of the total area of all scattered images occupying the final large image). You can adjust the packing settings based on this value to achieve better results.
 
-## Script Usage {/*examples*/}
+## Script Usage
 
-### Atlas Generation {/*examples*/}
+### Atlas Generation
 
 Galacean provides a command-line tool for sprite atlas generation. Developers can generate an atlas by following these steps:
 
@@ -138,7 +138,7 @@ Here, `inputPath` represents the path of the folder to be packed, and `outputNam
 
 For more details, refer to [Atlas Packing Tool](https://github.com/galacean/tools/blob/main/packages/atlas/README.md).
 
-### Usage {/*examples*/}
+### Usage
 
 1. Upload the atlas image and atlas file to the same directory on the CDN. For example, the addresses of the file and image should be `https://*cdnDir*/*atlasName*.atlas` and `https://*cdnDir*/*atlasName*.png`, respectively.
 
@@ -160,7 +160,7 @@ engine.resourceManager
   });
 ```
 
-## Notes {/*examples*/}
+## Notes
 
 1. Please pack sprites with connected drawing sequences into the same atlas to significantly improve performance (reduce the number of draw calls);
 2. When cleaning up the sprite atlas, ensure that all sprites in the atlas are no longer in use;

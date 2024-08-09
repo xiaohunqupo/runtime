@@ -17,7 +17,7 @@ The overall process of creating an interactive project using the editor:
 
 ```mermaid
 flowchart LR
-   Create Project --> Create Assets --> Build Scene --> Write Scripts --> Export
+   A[Create Project] --> B[Create Assets] --> B[Build Scene] --> C[Write Scripts] --> Export
 ```
 
 The editor allows better collaboration between technical and artistic team members. You can quickly start the development of your first project through business templates on the [editor homepage](https://galacean.antgroup.com/editor).
@@ -32,7 +32,7 @@ Includes the following sub-packages:
 
 | Package | Description | Related Documentation |
 | :-- | :-- | --- |
-| [@galacean/engine](https://www.npmjs.com/package/@galacean/engine) | Core architecture logic and core functionalities | [API](/en/apis/galacean) |
+| [@galacean/engine](https://www.npmjs.com/package/@galacean/engine) | Core architecture logic and core functionalities | [API](/apis/galacean) |
 | [@galacean/engine-physics-lite](https://www.npmjs.com/package/@galacean/engine-physics-lite) | Lightweight physics engine | [Doc](/en/docs/physics/overall) |
 | [@galacean/engine-physics-physx](https://www.npmjs.com/package/@galacean/engine-physics-physx) | Full-featured physics engine | [Doc](/en/docs/physics/overall) |
 | [@galacean/engine-shader-lab](https://www.npmjs.com/package/@galacean/engine-shader-lab) | Galacean Shader compiler | [Doc](/en/docs/graphics/shader/lab) |
