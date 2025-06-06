@@ -18,7 +18,7 @@ const outputDir = path.join(rootDir, "editor-preload");
 const outputDistDir = path.join(outputDir, "dist");
 const outputFile = path.join(outputDistDir, "browser.js");
 
-console.log(`Building editor-preload v${version}`);
+console.log(`Building editor-preload ${version}`);
 
 // Create output directories
 if (!fs.existsSync(outputDir)) {
@@ -40,7 +40,7 @@ const packageJson = {
 fs.writeFileSync(path.join(outputDir, "package.json"), JSON.stringify(packageJson, null, 2));
 
 // Initialize output file with header
-fs.writeFileSync(outputFile, `// @galacean/editor-preload v${version}\n`);
+fs.writeFileSync(outputFile, `// @galacean/editor-preload ${version}\n`);
 
 // Build first-party packages if needed
 if (!skipBuildArg) {
